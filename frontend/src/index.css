@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffcda9;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-5 py-2.5 font-semibold text-white shadow-premium transition-all hover:bg-brand-600 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-ink-900/10 bg-white px-5 py-2.5 font-semibold text-ink-900 transition-all hover:bg-neutral-50 active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 font-medium text-ink-700 transition-colors hover:bg-neutral-100;
+  }
+  .card {
+    @apply rounded-xl2 bg-white shadow-card;
+  }
+  .input {
+    @apply w-full rounded-xl border border-ink-900/10 bg-white px-4 py-2.5 text-sm outline-none transition-all placeholder:text-ink-900/40 focus:border-brand-400 focus:ring-4 focus:ring-brand-100;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-ink-700;
+  }
+  .skeleton {
+    @apply animate-pulseSoft rounded-lg bg-ink-900/10;
+  }
+}
