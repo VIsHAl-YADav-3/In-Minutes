@@ -10,7 +10,7 @@ import mongoose from "mongoose";
 const run = async () => {
   await connectDB();
 
-  const email = (process.env.ADMIN_EMAIL || "admin@inminutes.app").toLowerCase();
+  const email = (process.env.ADMIN_EMAIL || "admin@inminutess.app").toLowerCase();
   const password = process.env.ADMIN_PASSWORD || "ChangeMe123!";
 
   let admin = await User.findOne({ email });
